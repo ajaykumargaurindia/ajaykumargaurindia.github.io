@@ -4,9 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ajay Kumar Gaur | Digital Marketing Portfolio</title>
+<title>Ajay Kumar Gaur | Digital Marketing Consultant</title>
 
-<meta name="description" content="Ajay Kumar Gaur – Digital Marketing, Website Design, SEO & Business Automation Professional">
+<!-- SEO -->
+<meta name="description" content="Ajay Kumar Gaur – Digital Marketing, Website Design, SEO & Business Automation Consultant">
+<meta name="keywords" content="Ajay Kumar Gaur, Digital Marketing, SEO Expert, Website Design, Business Automation">
+<meta name="author" content="Ajay Kumar Gaur">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="Ajay Kumar Gaur | Digital Marketing Consultant">
+<meta property="og:description" content="Helping businesses grow with SEO, websites & automation">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ajaykumargaurindia.github.io/">
+<meta property="og:image" content="profile.jpg">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -15,25 +25,53 @@
   --bg:#020617;
   --card:#0f172a;
   --primary:#38bdf8;
-  --secondary:#2563eb;
   --text:#e5e7eb;
   --muted:#94a3b8;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+.light{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
 }
+
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:'Poppins',sans-serif;
-  background:linear-gradient(180deg,#020617,#020617);
+  background:var(--bg);
   color:var(--text);
   line-height:1.7;
+  transition:0.3s;
 }
 
-/* ===== HERO ===== */
+/* NAVBAR */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(15,23,42,0.8);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+}
+
+nav a{
+  color:var(--text);
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.toggle{
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* HERO */
 header{
   min-height:100vh;
   display:flex;
@@ -50,212 +88,201 @@ header img{
   border-radius:50%;
   border:4px solid var(--primary);
   margin-bottom:20px;
-  box-shadow:0 0 30px rgba(56,189,248,0.5);
 }
 
-header h1{
-  font-size:3rem;
-  font-weight:700;
-}
+header h1{font-size:3rem}
 
 .hero-text{
-  margin-top:12px;
-  font-size:1.2rem;
+  margin-top:10px;
   color:var(--muted);
   min-height:32px;
-  white-space:normal;
-  overflow:visible;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 section{
   max-width:1100px;
   margin:80px auto;
   padding:40px;
-  background:linear-gradient(180deg,#020617,#0f172a);
-  border-radius:22px;
-  box-shadow:0 25px 60px rgba(0,0,0,0.6);
+  background:var(--card);
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.3);
   opacity:0;
   transform:translateY(40px);
-  transition:all 0.8s ease;
+  transition:0.8s;
 }
 
-section.show{
-  opacity:1;
-  transform:translateY(0);
-}
+section.show{opacity:1;transform:none}
 
 h2{
-  font-size:1.8rem;
   color:var(--primary);
   margin-bottom:20px;
 }
 
-h2::after{
-  content:"";
-  width:60px;
-  height:3px;
-  background:linear-gradient(90deg,var(--primary),var(--secondary));
-  display:block;
-  margin-top:6px;
-  border-radius:5px;
-}
-
-section p{
-  color:var(--muted);
-}
-
-/* ===== SKILLS ===== */
+/* SKILLS */
 .skills{
   display:flex;
   flex-wrap:wrap;
-  gap:14px;
+  gap:12px;
 }
-
 .skills span{
-  padding:10px 18px;
-  border-radius:40px;
   background:linear-gradient(135deg,#0ea5e9,#2563eb);
   color:#fff;
-  font-size:0.9rem;
-  box-shadow:0 10px 25px rgba(14,165,233,0.4);
-  transition:0.3s;
+  padding:10px 16px;
+  border-radius:30px;
 }
 
-.skills span:hover{
-  transform:translateY(-6px) scale(1.05);
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 22px;
+  background:var(--primary);
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
 }
 
-/* ===== PROJECTS ===== */
-ul{
-  padding-left:20px;
+/* CONTACT FORM */
+form{
+  display:grid;
+  gap:15px;
+}
+input,textarea{
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+}
+button{
+  padding:12px;
+  background:var(--primary);
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  border-radius:8px;
 }
 
-ul li{
-  margin:12px 0;
-  color:#cbd5f5;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
   text-align:center;
-  padding:30px;
+  padding:25px;
   color:var(--muted);
-  border-top:1px solid #1e293b;
 }
 
-/* ===== WHATSAPP ===== */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   bottom:25px;
   right:25px;
   background:#25D366;
   color:#fff;
-  padding:15px 22px;
+  padding:14px 22px;
   border-radius:50px;
-  font-weight:600;
   text-decoration:none;
-  box-shadow:0 15px 35px rgba(0,0,0,0.6);
-  transition:0.3s;
-}
-
-.whatsapp:hover{
-  transform:scale(1.08);
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  header h1{font-size:2.2rem}
-  section{margin:50px 15px;padding:25px}
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <div><strong>Ajay Gaur</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <span class="toggle" onclick="toggleTheme()">🌙</span>
+  </div>
+</nav>
+
 <header>
-  <img src="profile.jpg" alt="Ajay Kumar Gaur">
+  <img src="profile.jpg">
   <h1>Ajay Kumar Gaur</h1>
   <p class="hero-text"><span id="typing"></span></p>
+  <a href="resume.pdf" class="btn" download>⬇ Download Resume</a>
 </header>
 
-<section class="reveal">
+<section id="about" class="reveal">
   <h2>About Me</h2>
-  <p>
-    Rudransh Digital Marketing & Consultancy is a results-driven digital solutions company helping businesses grow through digital strategy, automation, and performance marketing.
-    <br><br>
-    We specialize in Website Development, SEO, Online Listings, Business Automation, and Brand Growth with a focus on measurable results.
-  </p>
+  <p>Results-driven Digital Marketing Consultant helping brands grow using SEO, websites, automation and performance marketing.</p>
 </section>
 
-<section class="reveal">
+<section id="skills" class="reveal">
   <h2>Skills</h2>
   <div class="skills">
-    <span>Digital Marketing Strategy</span>
-    <span>SEO & Keyword Research</span>
-    <span>Website Design & Development</span>
-    <span>Business Automation</span>
-    <span>E-commerce Growth</span>
-    <span>Google Business Profile</span>
-    <span>Social Media Marketing</span>
-    <span>Paid Ads Optimization</span>
-    <span>Lead Generation</span>
-    <span>Analytics & Reporting</span>
+    <span>SEO</span><span>Website Design</span><span>Automation</span>
+    <span>Google Business</span><span>Paid Ads</span><span>Lead Generation</span>
   </div>
 </section>
 
-<section class="reveal">
+<section id="projects" class="reveal">
   <h2>Projects</h2>
   <ul>
-    <li>Gau Organics – Organic E-commerce Platform</li>
-    <li>Amazon Product Listing & SEO Optimization</li>
-    <li>Local Business Automation & CRM Funnels</li>
+    <li>Gau Organics – E-commerce</li>
+    <li>Amazon SEO Optimization</li>
+    <li>Local Business Automation</li>
   </ul>
 </section>
 
-<section class="reveal">
-  <h2>Contact</h2>
-  <p>📞 8505090500</p>
-  <p>📧 ajaygaur03@gmail.com</p>
+<section id="contact" class="reveal">
+  <h2>Contact Me</h2>
+
+  <!-- EMAILJS FORM -->
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
-  © 2025 Ajay Kumar Gaur | Digital Growth Specialist
+  © 2025 Ajay Kumar Gaur
 </footer>
 
-<a href="https://wa.me/918505090500" class="whatsapp" target="_blank">
-  💬 Chat on WhatsApp
-</a>
+<a href="https://wa.me/918505090500" class="whatsapp">💬 WhatsApp</a>
 
-<!-- ===== TYPING EFFECT (FIXED) ===== -->
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-const text = "Digital Marketing • Website Design • Business Automation";
-let i = 0;
-const speed = 50;
+(function(){
+  emailjs.init("YOUR_PUBLIC_KEY");
+})();
 
-function typeEffect(){
-  if(i < text.length){
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, speed);
-  }
-}
-typeEffect();
+document.getElementById("contact-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  emailjs.sendForm("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",this)
+  .then(()=>alert("Message Sent Successfully"));
+});
 </script>
 
-<!-- ===== SCROLL ANIMATION ===== -->
+<!-- TYPING -->
 <script>
-const sections = document.querySelectorAll(".reveal");
+const text="Digital Marketing • Website Design • Business Automation";
+let i=0;
+(function type(){
+ if(i<text.length){
+  document.getElementById("typing").innerHTML+=text.charAt(i++);
+  setTimeout(type,50);
+ }
+})();
+</script>
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-},{ threshold:0.15 });
+<!-- SCROLL -->
+<script>
+const obs=new IntersectionObserver(e=>{
+ e.forEach(i=>i.isIntersecting&&i.target.classList.add("show"))
+},{threshold:0.15});
+document.querySelectorAll(".reveal").forEach(s=>obs.observe(s));
+</script>
 
-sections.forEach(sec => observer.observe(sec));
+<!-- THEME TOGGLE -->
+<script>
+function toggleTheme(){
+ document.body.classList.toggle("light");
+}
 </script>
 
 </body>
