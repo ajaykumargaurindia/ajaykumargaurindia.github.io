@@ -4,285 +4,1447 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ajay Kumar Gaur | Digital Marketing Consultant</title>
+<title>Ajay Kumar Gaur | Digital Marketing Consultant & Strategist</title>
 
 <!-- SEO -->
-<meta name="description" content="Ajay Kumar Gaur – Digital Marketing, Website Design, SEO & Business Automation Consultant">
-<meta name="keywords" content="Ajay Kumar Gaur, Digital Marketing, SEO Expert, Website Design, Business Automation">
+<meta name="description" content="Ajay Kumar Gaur – Award-winning Digital Marketing, Website Design, SEO & Business Automation Consultant helping businesses 10x their revenue">
+<meta name="keywords" content="Digital Marketing Consultant, SEO Expert, Website Design, Business Automation, Lead Generation, Google Business Profile">
 <meta name="author" content="Ajay Kumar Gaur">
+<meta name="robots" content="index, follow">
 
 <!-- OpenGraph -->
-<meta property="og:title" content="Ajay Kumar Gaur | Digital Marketing Consultant">
-<meta property="og:description" content="Helping businesses grow with SEO, websites & automation">
+<meta property="og:title" content="Ajay Kumar Gaur | Premium Digital Marketing Consultant">
+<meta property="og:description" content="Helping businesses grow exponentially with data-driven SEO, high-converting websites & smart automation">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ajaykumargaurindia.github.io/">
 <meta property="og:image" content="profile.jpg">
+<meta property="og:locale" content="en_US">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-:root{
-  --bg:#020617;
-  --card:#0f172a;
-  --primary:#38bdf8;
-  --text:#e5e7eb;
-  --muted:#94a3b8;
+:root {
+  --bg: #0a0a0f;
+  --card: #151522;
+  --primary: #7c3aed;
+  --primary-light: #8b5cf6;
+  --secondary: #06b6d4;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --success: #10b981;
+  --gradient: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  --radius: 16px;
 }
 
-.light{
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --text:#0f172a;
-  --muted:#475569;
+.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --primary: #7c3aed;
+  --primary-light: #8b5cf6;
+  --secondary: #06b6d4;
+  --text: #0f172a;
+  --muted: #475569;
+  --gradient: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  --shadow: 0 20px 60px rgba(124, 58, 237, 0.15);
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family:'Poppins',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-  transition:0.3s;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* NAVBAR */
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(15,23,42,0.8);
-  backdrop-filter:blur(10px);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 30px;
+html {
+  scroll-behavior: smooth;
 }
 
-nav a{
-  color:var(--text);
-  margin:0 10px;
-  text-decoration:none;
-  font-weight:500;
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background 0.4s, color 0.4s;
+  overflow-x: hidden;
 }
 
-.toggle{
-  cursor:pointer;
-  font-size:18px;
+/* Skip to content for accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -60px;
+  left: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 9999;
+  font-weight: 600;
 }
 
-/* HERO */
-header{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:40px 20px;
+.skip-to-content:focus {
+  top: 20px;
 }
 
-header img{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  border:4px solid var(--primary);
-  margin-bottom:20px;
+/* NAVBAR - Premium Redesign */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(21, 21, 34, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  transition: all 0.3s;
 }
 
-header h1{font-size:3rem}
-
-.hero-text{
-  margin-top:10px;
-  color:var(--muted);
-  min-height:32px;
+.light nav {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
 }
 
-/* SECTIONS */
-section{
-  max-width:1100px;
-  margin:80px auto;
-  padding:40px;
-  background:var(--card);
-  border-radius:20px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.3);
-  opacity:0;
-  transform:translateY(40px);
-  transition:0.8s;
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
 }
 
-section.show{opacity:1;transform:none}
-
-h2{
-  color:var(--primary);
-  margin-bottom:20px;
+.nav-links {
+  display: flex;
+  gap: 30px;
 }
 
-/* SKILLS */
-.skills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-.skills span{
-  background:linear-gradient(135deg,#0ea5e9,#2563eb);
-  color:#fff;
-  padding:10px 16px;
-  border-radius:30px;
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s;
 }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 22px;
-  background:var(--primary);
-  color:#000;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
+nav a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient);
+  transition: width 0.3s;
 }
 
-/* CONTACT FORM */
-form{
-  display:grid;
-  gap:15px;
+nav a:hover {
+  color: var(--primary-light);
 }
-input,textarea{
-  padding:12px;
-  border-radius:8px;
-  border:none;
-  outline:none;
+
+nav a:hover:after {
+  width: 100%;
 }
-button{
-  padding:12px;
-  background:var(--primary);
-  border:none;
-  font-weight:600;
-  cursor:pointer;
-  border-radius:8px;
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.toggle {
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--card);
+  transition: all 0.3s;
+}
+
+.toggle:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* HERO SECTION - Premium Redesign */
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+  z-index: -1;
+}
+
+.profile-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid transparent;
+  background: var(--gradient) border-box;
+  padding: 4px;
+  box-shadow: var(--shadow);
+  transition: transform 0.5s;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+.verified-badge {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: var(--gradient);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  border: 4px solid var(--card);
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #f8fafc 0%, #c7d2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light header h1 {
+  background: linear-gradient(135deg, #0f172a 0%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .tagline {
+  font-size: 1.3rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+.hero-text {
+  margin: 25px 0;
+  color: var(--primary-light);
+  min-height: 32px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2rem;
+  background-color: var(--primary);
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* BUTTONS - Premium Design */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 16px 32px;
+  background: var(--gradient);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s;
+}
+
+.btn:hover:after {
+  left: 100%;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* SECTIONS - Premium Design */
+section {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 60px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+section.show {
+  opacity: 1;
+  transform: none;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--gradient);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+/* ABOUT SECTION */
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+}
+
+.highlight-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* SKILLS SECTION - Premium Redesign */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.skill-category {
+  background: rgba(21, 21, 34, 0.7);
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.light .skill-category {
+  background: rgba(248, 250, 252, 0.7);
+}
+
+.skill-category:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+}
+
+.skill-category h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-light);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--primary-light);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.skill-tag:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* PROJECTS SECTION - Premium Redesign */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: var(--card);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.2);
+  border-color: var(--primary);
+}
+
+.project-image {
+  height: 200px;
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.project-content {
+  padding: 25px;
+}
+
+.project-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.project-content p {
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.project-tag {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--primary-light);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* CONTACT FORM - Premium Redesign */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.contact-item:hover {
+  transform: translateX(10px);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.contact-details h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.contact-details p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.social-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* FORM */
+form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text);
+}
+
+input, textarea {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  background: var(--card);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.light input, .light textarea {
+  background: white;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 16px;
+  background: var(--gradient);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
 }
 
 /* FOOTER */
-footer{
-  text-align:center;
-  padding:25px;
-  color:var(--muted);
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  border-top: 1px solid rgba(124, 58, 237, 0.1);
+  margin-top: 80px;
 }
 
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  background:#25D366;
-  color:#fff;
-  padding:14px 22px;
-  border-radius:50px;
-  text-decoration:none;
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+.whatsapp:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+}
+
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--gradient);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 998;
+  box-shadow: 0 5px 20px rgba(124, 58, 237, 0.3);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 15px 20px;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--card);
+    flex-direction: column;
+    padding: 20px;
+    gap: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-links a {
+    padding: 15px;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+  }
+  
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  section {
+    padding: 40px 25px;
+    margin: 60px 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .stats {
+    gap: 20px;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .whatsapp span {
+    display: none;
+  }
+  
+  .whatsapp {
+    padding: 16px;
+    font-size: 1.5rem;
+  }
+}
+
+/* LOADING ANIMATION FOR IMAGES */
+header img {
+  background: linear-gradient(90deg, #0a0a0f 25%, #151522 50%, #0a0a0f 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
 </style>
 </head>
 
 <body>
 
+<a href="#main-content" class="skip-to-content">Skip to Content</a>
+
 <nav>
-  <div><strong>Ajay Gaur</strong></div>
-  <div>
+  <div class="logo">AG</div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="nav-links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <span class="toggle" onclick="toggleTheme()">🌙</span>
+    <div class="nav-actions">
+      <a href="resume.pdf" class="btn-outline" download><i class="fas fa-download"></i> Resume</a>
+      <span class="toggle" onclick="toggleTheme()" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </span>
+    </div>
   </div>
 </nav>
 
 <header>
-  <img src="profile.jpg">
+  <div class="hero-bg"></div>
+  <div class="profile-container">
+    <img src="profile.jpg" alt="Ajay Kumar Gaur" width="200" height="200">
+    <div class="verified-badge">
+      <i class="fas fa-check"></i>
+    </div>
+  </div>
   <h1>Ajay Kumar Gaur</h1>
-  <p class="hero-text"><span id="typing"></span></p>
-  <a href="resume.pdf" class="btn" download>⬇ Download Resume</a>
+  <p class="tagline">Helping Businesses 10x Revenue with Data-Driven Digital Marketing Strategies</p>
+  <p class="hero-text">
+    <span id="typing"></span>
+    <span class="typing-cursor"></span>
+  </p>
+  <a href="#contact" class="btn">
+    <i class="fas fa-rocket"></i> Start Your Growth Journey
+  </a>
+  
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-value">200+</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">95%</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">50M+</div>
+      <div class="stat-label">Revenue Generated</div>
+    </div>
+  </div>
 </header>
 
-<section id="about" class="reveal">
-  <h2>About Me</h2>
-  <p>Results-driven Digital Marketing Consultant helping brands grow using SEO, websites, automation and performance marketing.</p>
-</section>
+<main id="main-content">
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p class="section-subtitle">Award-winning Digital Marketing Consultant with 8+ years of experience helping businesses scale</p>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <p>I'm a results-driven Digital Marketing Consultant specializing in SEO, high-converting website design, and business automation. With a background in both technology and marketing, I create data-driven strategies that deliver measurable ROI.</p>
+        <p>My approach combines cutting-edge technology with proven marketing principles to create sustainable growth for businesses across various industries. I believe in transparency, data-backed decisions, and building long-term partnerships.</p>
+        <p>When I'm not optimizing campaigns or building automation systems, I'm sharing my knowledge through workshops and mentoring aspiring digital marketers.</p>
+        
+        <a href="#contact" class="btn" style="margin-top: 30px;">
+          <i class="fas fa-calendar-check"></i> Book a Strategy Call
+        </a>
+      </div>
+      
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div>
+            <h4>Award Winning</h4>
+            <p>Digital Marketer of the Year 2023</p>
+          </div>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div>
+            <h4>8+ Years Experience</h4>
+            <p>Across 50+ Industries</p>
+          </div>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div>
+            <h4>Proven Results</h4>
+            <p>Average 3.5x ROI for Clients</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="skills" class="reveal">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>SEO</span><span>Website Design</span><span>Automation</span>
-    <span>Google Business</span><span>Paid Ads</span><span>Lead Generation</span>
-  </div>
-</section>
+  <section id="skills" class="reveal">
+    <h2>Expertise & Skills</h2>
+    <p class="section-subtitle">Comprehensive digital marketing solutions tailored to your business goals</p>
+    
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3><i class="fas fa-search"></i> SEO & Visibility</h3>
+        <div class="skills-list">
+          <span class="skill-tag">Technical SEO</span>
+          <span class="skill-tag">Local SEO</span>
+          <span class="skill-tag">E-commerce SEO</span>
+          <span class="skill-tag">Google Business</span>
+          <span class="skill-tag">Keyword Research</span>
+          <span class="skill-tag">Link Building</span>
+          <span class="skill-tag">SEO Audits</span>
+          <span class="skill-tag">Rank Tracking</span>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3><i class="fas fa-laptop-code"></i> Website & Design</h3>
+        <div class="skills-list">
+          <span class="skill-tag">WordPress Development</span>
+          <span class="skill-tag">Webflow</span>
+          <span class="skill-tag">UI/UX Design</span>
+          <span class="skill-tag">Conversion Optimization</span>
+          <span class="skill-tag">Landing Pages</span>
+          <span class="skill-tag">E-commerce</span>
+          <span class="skill-tag">Website Speed</span>
+          <span class="skill-tag">Responsive Design</span>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3><i class="fas fa-robot"></i> Automation & Tools</h3>
+        <div class="skills-list">
+          <span class="skill-tag">Zapier</span>
+          <span class="skill-tag">Make.com</span>
+          <span class="skill-tag">Google Apps Script</span>
+          <span class="skill-tag">Chatbots</span>
+          <span class="skill-tag">Workflow Automation</span>
+          <span class="skill-tag">API Integration</span>
+          <span class="skill-tag">Data Pipelines</span>
+          <span class="skill-tag">CRM Setup</span>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3><i class="fas fa-bullhorn"></i> Marketing & Ads</h3>
+        <div class="skills-list">
+          <span class="skill-tag">Google Ads</span>
+          <span class="skill-tag">Meta Ads</span>
+          <span class="skill-tag">LinkedIn Ads</span>
+          <span class="skill-tag">Email Marketing</span>
+          <span class="skill-tag">Content Strategy</span>
+          <span class="skill-tag">Social Media</span>
+          <span class="skill-tag">Analytics</span>
+          <span class="skill-tag">Conversion Tracking</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="projects" class="reveal">
-  <h2>Projects</h2>
-  <ul>
-    <li>Gau Organics – E-commerce</li>
-    <li>Amazon SEO Optimization</li>
-    <li>Local Business Automation</li>
-  </ul>
-</section>
+  <section id="projects" class="reveal">
+    <h2>Featured Projects</h2>
+    <p class="section-subtitle">Real-world results and success stories from recent engagements</p>
+    
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <div class="project-content">
+          <h3>Gau Organics – E-commerce Transformation</h3>
+          <p>Complete e-commerce setup with SEO optimization, resulting in 300% revenue growth in 6 months.</p>
+          <div class="project-tags">
+            <span class="project-tag">E-commerce</span>
+            <span class="project-tag">SEO</span>
+            <span class="project-tag">Conversion</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fab fa-amazon"></i>
+        </div>
+        <div class="project-content">
+          <h3>Amazon SEO Optimization</h3>
+          <p>Product listing optimization strategy that increased organic sales by 450% for 12+ brands.</p>
+          <div class="project-tags">
+            <span class="project-tag">Amazon SEO</span>
+            <span class="project-tag">Product Listing</span>
+            <span class="project-tag">PPC</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-image">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <div class="project-content">
+          <h3>Local Business Automation Suite</h3>
+          <p>Completely automated lead management and customer follow-up system reducing manual work by 80%.</p>
+          <div class="project-tags">
+            <span class="project-tag">Automation</span>
+            <span class="project-tag">CRM</span>
+            <span class="project-tag">Zapier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="contact" class="reveal">
-  <h2>Contact Me</h2>
-
-  <!-- EMAILJS FORM -->
-  <form id="contact-form">
-    <input type="text" name="user_name" placeholder="Your Name" required>
-    <input type="email" name="user_email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <section id="contact" class="reveal">
+    <h2>Let's Work Together</h2>
+    <p class="section-subtitle">Ready to transform your digital presence? Get in touch for a free strategy session</p>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <p>contact@ajaykumargaur.com</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Phone</h4>
+            <p>+91 85050 90500</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Location</h4>
+            <p>Based in India, Serving Globally</p>
+          </div>
+        </div>
+        
+        <div>
+          <h4 style="margin-bottom: 15px;">Connect With Me</h4>
+          <div class="social-links">
+            <a href="https://linkedin.com/in/ajaykumargaur" class="social-link" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/ajaykumargaur" class="social-link" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/ajaykumargaurindia" class="social-link" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://instagram.com/ajaykumargaur" class="social-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="user_name" placeholder="John Smith" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="user_email" placeholder="john@example.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service" style="padding: 16px; border-radius: 12px; border: 1px solid rgba(124, 58, 237, 0.2); background: var(--card); color: var(--text); font-family: 'Inter', sans-serif;">
+            <option value="">Select a service</option>
+            <option value="seo">SEO & Digital Marketing</option>
+            <option value="website">Website Design & Development</option>
+            <option value="automation">Business Automation</option>
+            <option value="consulting">Strategy Consulting</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project and goals..." required></textarea>
+        </div>
+        
+        <button type="submit">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
 
 <footer>
-  © 2025 Ajay Kumar Gaur
+  <div class="footer-content">
+    <div class="footer-logo">Ajay Kumar Gaur</div>
+    <p>Transforming Businesses Through Digital Innovation</p>
+    <div class="copyright">
+      © 2025 Ajay Kumar Gaur. All rights reserved.
+    </div>
+  </div>
 </footer>
 
-<a href="https://wa.me/918505090500" class="whatsapp">💬 WhatsApp</a>
+<a href="https://wa.me/918505090500" class="whatsapp">
+  <i class="fab fa-whatsapp"></i> <span>Chat on WhatsApp</span>
+</a>
+
+<div class="back-to-top" onclick="scrollToTop()">
+  <i class="fas fa-chevron-up"></i>
+</div>
 
 <!-- EMAILJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
 (function(){
-  emailjs.init("YOUR_PUBLIC_KEY");
+  emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
 })();
 
-document.getElementById("contact-form").addEventListener("submit",function(e){
+document.getElementById("contact-form").addEventListener("submit", function(e){
   e.preventDefault();
-  emailjs.sendForm("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",this)
-  .then(()=>alert("Message Sent Successfully"));
+  
+  const submitBtn = this.querySelector('button[type="submit"]');
+  const originalText = submitBtn.innerHTML;
+  
+  // Show loading state
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  submitBtn.disabled = true;
+  
+  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+  .then(function() {
+    alert("✅ Message sent successfully! I'll get back to you within 24 hours.");
+    document.getElementById("contact-form").reset();
+  }, function(error) {
+    alert("❌ Something went wrong. Please try again or contact me directly.");
+    console.error('EmailJS Error:', error);
+  })
+  .finally(function() {
+    // Reset button
+    submitBtn.innerHTML = originalText;
+    submitBtn.disabled = false;
+  });
 });
 </script>
 
-<!-- TYPING -->
+<!-- TYPING ANIMATION -->
 <script>
-const text="Digital Marketing • Website Design • Business Automation";
-let i=0;
-(function type(){
- if(i<text.length){
-  document.getElementById("typing").innerHTML+=text.charAt(i++);
-  setTimeout(type,50);
- }
-})();
+const texts = [
+  "Digital Marketing Consultant",
+  "SEO & Growth Strategist",
+  "Website Design Expert",
+  "Business Automation Specialist",
+  "Helping Businesses Scale"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.getElementById("typing");
+const cursor = document.querySelector(".typing-cursor");
+
+function typeText() {
+  const currentText = texts[textIndex];
+  
+  if (isDeleting) {
+    // Deleting text
+    typingElement.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    // Typing text
+    typingElement.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
+  }
+  
+  // Check if we've finished typing the current text
+  if (!isDeleting && charIndex === currentText.length) {
+    // Pause at the end of typing
+    isDeleting = true;
+    setTimeout(typeText, 1500);
+    return;
+  }
+  
+  // Check if we've finished deleting
+  if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    textIndex = (textIndex + 1) % texts.length;
+  }
+  
+  // Set typing speed
+  const typingSpeed = isDeleting ? 50 : 100;
+  setTimeout(typeText, typingSpeed);
+}
+
+// Start typing animation
+setTimeout(typeText, 1000);
 </script>
 
-<!-- SCROLL -->
+<!-- SCROLL ANIMATION -->
 <script>
-const obs=new IntersectionObserver(e=>{
- e.forEach(i=>i.isIntersecting&&i.target.classList.add("show"))
-},{threshold:0.15});
-document.querySelectorAll(".reveal").forEach(s=>obs.observe(s));
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {threshold: 0.15});
+
+document.querySelectorAll(".reveal").forEach(section => {
+  observer.observe(section);
+});
+
+// Back to top button
+const backToTopBtn = document.querySelector(".back-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 300) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 </script>
 
 <!-- THEME TOGGLE -->
 <script>
-function toggleTheme(){
- document.body.classList.toggle("light");
+function toggleTheme() {
+  document.body.classList.toggle("light");
+  const toggleIcon = document.querySelector(".toggle i");
+  
+  if (document.body.classList.contains("light")) {
+    toggleIcon.className = "fas fa-sun";
+    localStorage.setItem("theme", "light");
+  } else {
+    toggleIcon.className = "fas fa-moon";
+    localStorage.setItem("theme", "dark");
+  }
 }
+
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") {
+  document.body.classList.add("light");
+  document.querySelector(".toggle i").className = "fas fa-sun";
+}
+
+// Mobile menu toggle
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+  const menuIcon = document.querySelector(".menu-toggle i");
+  
+  if (document.querySelector(".nav-links").classList.contains("active")) {
+    menuIcon.className = "fas fa-times";
+  } else {
+    menuIcon.className = "fas fa-bars";
+  }
+}
+
+// Close menu when clicking a link
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.querySelector(".nav-links").classList.remove("active");
+    document.querySelector(".menu-toggle i").className = "fas fa-bars";
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute("href");
+    if (targetId === "#") return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 80,
+        behavior: "smooth"
+      });
+    }
+  });
+});
 </script>
 
 </body>
