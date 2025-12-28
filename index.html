@@ -1171,7 +1171,7 @@ header img {
           </div>
           <div class="contact-details">
             <h4>Email</h4>
-            <p>contact@ajaykumargaur.com</p>
+            <p>ajaygaur03@gmail.com</p>
           </div>
         </div>
         
@@ -1272,7 +1272,7 @@ header img {
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
 (function(){
-  emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+  emailjs.init("QDgppR3UlFNrTqh5w");
 })();
 
 document.getElementById("contact-form").addEventListener("submit", function(e){
@@ -1285,7 +1285,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
   submitBtn.disabled = true;
   
-  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+  emailjs.sendForm("service_qm0fsbb", "template_zkbagjh", this)
   .then(function() {
     alert("✅ Message sent successfully! I'll get back to you within 24 hours.");
     document.getElementById("contact-form").reset();
