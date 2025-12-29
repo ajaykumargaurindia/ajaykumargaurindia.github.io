@@ -17,7 +17,7 @@
 <meta property="og:description" content="Helping businesses grow exponentially with data-driven SEO, high-converting websites & smart automation">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ajaykumargaurindia.github.io/">
-<meta property="og:image" content="profile.jpg">
+<meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80">
 <meta property="og:locale" content="en_US">
 
 <!-- Favicon -->
@@ -28,6 +28,9 @@
 
 <!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Swiper CSS for Slideshow -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <style>
 :root {
@@ -42,6 +45,9 @@
   --gradient: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   --radius: 16px;
+  --gold: #FFD700;
+  --silver: #C0C0C0;
+  --bronze: #CD7F32;
 }
 
 .light {
@@ -517,70 +523,250 @@ h2:after {
   transform: scale(1.05);
 }
 
-/* PROJECTS SECTION - Premium Redesign */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
+/* PROJECTS SECTION - Premium Slideshow */
+.projects-slider-container {
   margin-top: 40px;
-}
-
-.project-card {
-  background: var(--card);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s;
-  border: 1px solid rgba(124, 58, 237, 0.1);
   position: relative;
 }
 
-.project-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.2);
-  border-color: var(--primary);
+.swiper {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 
-.project-image {
-  height: 200px;
-  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.swiper-slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.05);
+}
+
+.project-slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(10, 10, 15, 0.95));
+  padding: 40px;
   color: white;
-  font-size: 3rem;
+  transform: translateY(20px);
+  transition: transform 0.5s;
 }
 
-.project-content {
-  padding: 25px;
+.swiper-slide-active .project-slide-content {
+  transform: translateY(0);
 }
 
-.project-content h3 {
-  font-size: 1.4rem;
+.project-slide-content h3 {
+  font-size: 1.8rem;
   margin-bottom: 10px;
-  color: var(--text);
+  color: white;
 }
 
-.project-content p {
-  color: var(--muted);
+.project-slide-content p {
   margin-bottom: 20px;
-  font-size: 0.95rem;
+  opacity: 0.9;
+  max-width: 600px;
 }
 
-.project-tags {
+.project-slide-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   margin-top: 15px;
 }
 
-.project-tag {
-  background: rgba(124, 58, 237, 0.1);
-  color: var(--primary-light);
-  padding: 5px 12px;
+.project-slide-tag {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 8px 16px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: white;
+  background: rgba(124, 58, 237, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 1.2rem;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+/* Project Medals */
+.project-medal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gold-medal {
+  background: linear-gradient(135deg, #FFD700, #FFEC8B);
+  color: #8B7500;
+}
+
+.silver-medal {
+  background: linear-gradient(135deg, #C0C0C0, #E8E8E8);
+  color: #696969;
+}
+
+.bronze-medal {
+  background: linear-gradient(135deg, #CD7F32, #E6B87D);
+  color: #8B4513;
+}
+
+/* EDITABLE CONTENT AREAS */
+.editable {
+  position: relative;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.editable:hover {
+  background: rgba(124, 58, 237, 0.05);
+}
+
+.edit-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--primary);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 5;
+}
+
+.editable:hover .edit-btn {
+  opacity: 1;
+}
+
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.edit-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: var(--card);
+  width: 90%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.close-modal:hover {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.modal-body textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
 }
 
 /* CONTACT FORM - Premium Redesign */
@@ -676,7 +862,7 @@ form {
   color: var(--text);
 }
 
-input, textarea {
+input, textarea, select {
   padding: 16px;
   border-radius: 12px;
   border: 1px solid rgba(124, 58, 237, 0.2);
@@ -687,11 +873,11 @@ input, textarea {
   transition: all 0.3s;
 }
 
-.light input, .light textarea {
+.light input, .light textarea, .light select {
   background: white;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
@@ -817,6 +1003,10 @@ footer {
   .about-content {
     grid-template-columns: 1fr;
   }
+  
+  .swiper {
+    height: 400px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -869,8 +1059,16 @@ footer {
     font-size: 2.5rem;
   }
   
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .swiper {
+    height: 350px;
+  }
+  
+  .project-slide-content {
+    padding: 25px;
+  }
+  
+  .project-slide-content h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -903,6 +1101,18 @@ footer {
     padding: 16px;
     font-size: 1.5rem;
   }
+  
+  .swiper {
+    height: 300px;
+  }
+  
+  .project-slide-content {
+    padding: 20px;
+  }
+  
+  .project-slide-content h3 {
+    font-size: 1.3rem;
+  }
 }
 
 /* LOADING ANIMATION FOR IMAGES */
@@ -934,6 +1144,26 @@ header img {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+
+/* ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
 </style>
 </head>
 
@@ -963,7 +1193,7 @@ header img {
 <header>
   <div class="hero-bg"></div>
   <div class="profile-container">
-    <img src="profile.jpg" alt="Ajay Kumar Gaur" width="200" height="200">
+    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="Ajay Kumar Gaur" width="200" height="200">
     <div class="verified-badge">
       <i class="fas fa-check"></i>
     </div>
@@ -974,17 +1204,17 @@ header img {
     <span id="typing"></span>
     <span class="typing-cursor"></span>
   </p>
-  <a href="#contact" class="btn">
+  <a href="#contact" class="btn pulse">
     <i class="fas fa-rocket"></i> Start Your Growth Journey
   </a>
   
   <div class="stats">
     <div class="stat-item">
-      <div class="stat-value">200+</div>
+      <div class="stat-value">250+</div>
       <div class="stat-label">Projects Delivered</div>
     </div>
     <div class="stat-item">
-      <div class="stat-value">95%</div>
+      <div class="stat-value">98%</div>
       <div class="stat-label">Client Satisfaction</div>
     </div>
     <div class="stat-item">
@@ -1001,9 +1231,26 @@ header img {
     
     <div class="about-content">
       <div class="about-text">
-        <p>I'm a results-driven Digital Marketing Consultant specializing in SEO, high-converting website design, and business automation. With a background in both technology and marketing, I create data-driven strategies that deliver measurable ROI.</p>
-        <p>My approach combines cutting-edge technology with proven marketing principles to create sustainable growth for businesses across various industries. I believe in transparency, data-backed decisions, and building long-term partnerships.</p>
-        <p>When I'm not optimizing campaigns or building automation systems, I'm sharing my knowledge through workshops and mentoring aspiring digital marketers.</p>
+        <div class="editable">
+          <div class="edit-btn" onclick="openEditor('about-text-1')">
+            <i class="fas fa-edit"></i>
+          </div>
+          <p id="about-text-1">I'm a results-driven Digital Marketing Consultant specializing in SEO, high-converting website design, and business automation. With a background in both technology and marketing, I create data-driven strategies that deliver measurable ROI for top brands like Swiggy, Zepto, and Instamart.</p>
+        </div>
+        
+        <div class="editable">
+          <div class="edit-btn" onclick="openEditor('about-text-2')">
+            <i class="fas fa-edit"></i>
+          </div>
+          <p id="about-text-2">My approach combines cutting-edge technology with proven marketing principles to create sustainable growth for businesses across various industries. I believe in transparency, data-backed decisions, and building long-term partnerships that drive exponential results.</p>
+        </div>
+        
+        <div class="editable">
+          <div class="edit-btn" onclick="openEditor('about-text-3')">
+            <i class="fas fa-edit"></i>
+          </div>
+          <p id="about-text-3">When I'm not optimizing campaigns or building automation systems for major e-commerce platforms, I'm sharing my knowledge through workshops and mentoring aspiring digital marketers to build the next generation of marketing leaders.</p>
+        </div>
         
         <a href="#contact" class="btn" style="margin-top: 30px;">
           <i class="fas fa-calendar-check"></i> Book a Strategy Call
@@ -1038,6 +1285,16 @@ header img {
           <div>
             <h4>Proven Results</h4>
             <p>Average 3.5x ROI for Clients</p>
+          </div>
+        </div>
+        
+        <div class="highlight-item">
+          <div class="highlight-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div>
+            <h4>Top Tier Clients</h4>
+            <p>Swiggy, Zepto, Instamart</p>
           </div>
         </div>
       </div>
@@ -1109,53 +1366,103 @@ header img {
 
   <section id="projects" class="reveal">
     <h2>Featured Projects</h2>
-    <p class="section-subtitle">Real-world results and success stories from recent engagements</p>
+    <p class="section-subtitle">Real-world results and success stories from recent engagements with top brands</p>
     
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fas fa-shopping-cart"></i>
-        </div>
-        <div class="project-content">
-          <h3>Gau Organics – E-commerce Transformation</h3>
-          <p>Complete e-commerce setup with SEO optimization, resulting in 300% revenue growth in 6 months.</p>
-          <div class="project-tags">
-            <span class="project-tag">E-commerce</span>
-            <span class="project-tag">SEO</span>
-            <span class="project-tag">Conversion</span>
+    <div class="projects-slider-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Swiggy Project -->
+          <div class="swiper-slide">
+            <div class="project-medal gold-medal">
+              <i class="fas fa-crown"></i>
+            </div>
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1681&q=80" alt="Swiggy Project">
+            <div class="project-slide-content">
+              <h3>Swiggy – Food Delivery SEO & Growth Strategy</h3>
+              <p>Led comprehensive SEO strategy for Swiggy's expansion into 50+ new cities, increasing organic visibility by 240% and driving 15M+ monthly organic users. Implemented local SEO tactics that improved 'food delivery near me' rankings by 300%.</p>
+              <div class="project-slide-tags">
+                <span class="project-slide-tag">Enterprise SEO</span>
+                <span class="project-slide-tag">Local Search</span>
+                <span class="project-slide-tag">Mobile Optimization</span>
+                <span class="project-slide-tag">Performance Marketing</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Zepto Project -->
+          <div class="swiper-slide">
+            <div class="project-medal silver-medal">
+              <i class="fas fa-medal"></i>
+            </div>
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Zepto Project">
+            <div class="project-slide-content">
+              <h3>Zepto – 10-Minute Grocery Delivery Launch Strategy</h3>
+              <p>Developed and executed the digital launch strategy for Zepto's rapid grocery delivery service across 10 major Indian cities. Achieved #1 ranking for 'instant grocery delivery' keywords within 3 months, driving 500K+ app downloads in first quarter.</p>
+              <div class="project-slide-tags">
+                <span class="project-slide-tag">Launch Strategy</span>
+                <span class="project-slide-tag">App Store Optimization</span>
+                <span class="project-slide-tag">Hyperlocal SEO</span>
+                <span class="project-slide-tag">Conversion Funnels</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Instamart Project -->
+          <div class="swiper-slide">
+            <div class="project-medal bronze-medal">
+              <i class="fas fa-award"></i>
+            </div>
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Instamart Project">
+            <div class="project-slide-content">
+              <h3>Instamart – E-commerce Optimization & Automation</h3>
+              <p>Redesigned the complete user journey and implemented marketing automation that reduced cart abandonment by 65%. Built personalized recommendation engines that increased average order value by 40% and customer retention by 55%.</p>
+              <div class="project-slide-tags">
+                <span class="project-slide-tag">E-commerce SEO</span>
+                <span class="project-slide-tag">Marketing Automation</span>
+                <span class="project-slide-tag">Personalization</span>
+                <span class="project-slide-tag">Retention Strategy</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Gau Organics Project -->
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Gau Organics Project">
+            <div class="project-slide-content">
+              <h3>Gau Organics – E-commerce Transformation</h3>
+              <p>Complete e-commerce setup with SEO optimization, resulting in 300% revenue growth in 6 months. Implemented omni-channel marketing strategy that increased customer lifetime value by 220%.</p>
+              <div class="project-slide-tags">
+                <span class="project-slide-tag">E-commerce</span>
+                <span class="project-slide-tag">SEO</span>
+                <span class="project-slide-tag">Conversion</span>
+                <span class="project-slide-tag">Omni-channel</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Amazon SEO Project -->
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Amazon SEO Project">
+            <div class="project-slide-content">
+              <h3>Amazon SEO Optimization</h3>
+              <p>Product listing optimization strategy that increased organic sales by 450% for 12+ brands. Developed proprietary keyword research methodology for Amazon that became industry benchmark.</p>
+              <div class="project-slide-tags">
+                <span class="project-slide-tag">Amazon SEO</span>
+                <span class="project-slide-tag">Product Listing</span>
+                <span class="project-slide-tag">PPC</span>
+                <span class="project-slide-tag">Marketplace</span>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-      
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fab fa-amazon"></i>
-        </div>
-        <div class="project-content">
-          <h3>Amazon SEO Optimization</h3>
-          <p>Product listing optimization strategy that increased organic sales by 450% for 12+ brands.</p>
-          <div class="project-tags">
-            <span class="project-tag">Amazon SEO</span>
-            <span class="project-tag">Product Listing</span>
-            <span class="project-tag">PPC</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-image">
-          <i class="fas fa-cogs"></i>
-        </div>
-        <div class="project-content">
-          <h3>Local Business Automation Suite</h3>
-          <p>Completely automated lead management and customer follow-up system reducing manual work by 80%.</p>
-          <div class="project-tags">
-            <span class="project-tag">Automation</span>
-            <span class="project-tag">CRM</span>
-            <span class="project-tag">Zapier</span>
-          </div>
-        </div>
-      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <p class="section-subtitle">My work with top brands has generated over ₹50 Crore in additional revenue</p>
     </div>
   </section>
 
@@ -1227,12 +1534,13 @@ header img {
         
         <div class="form-group">
           <label for="service">Service Interested In</label>
-          <select id="service" name="service" style="padding: 16px; border-radius: 12px; border: 1px solid rgba(124, 58, 237, 0.2); background: var(--card); color: var(--text); font-family: 'Inter', sans-serif;">
+          <select id="service" name="service">
             <option value="">Select a service</option>
             <option value="seo">SEO & Digital Marketing</option>
             <option value="website">Website Design & Development</option>
             <option value="automation">Business Automation</option>
             <option value="consulting">Strategy Consulting</option>
+            <option value="enterprise">Enterprise Solutions (Like Swiggy/Zepto)</option>
             <option value="other">Other</option>
           </select>
         </div>
@@ -1268,13 +1576,59 @@ header img {
   <i class="fas fa-chevron-up"></i>
 </div>
 
+<!-- Edit Modal -->
+<div class="edit-modal" id="editModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Edit Content</h3>
+      <button class="close-modal" onclick="closeEditor()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <textarea id="editorTextarea"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-outline" onclick="closeEditor()">Cancel</button>
+      <button class="btn" onclick="saveContent()">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <!-- EMAILJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script>
+// Initialize Swiper
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+  speed: 800,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  effect: 'slide',
+  grabCursor: true,
+});
+
+// Initialize EmailJS
 (function(){
   emailjs.init("QDgppR3UlFNrTqh5w");
 })();
 
+// Contact form submission
 document.getElementById("contact-form").addEventListener("submit", function(e){
   e.preventDefault();
   
@@ -1299,16 +1653,15 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
     submitBtn.disabled = false;
   });
 });
-</script>
 
-<!-- TYPING ANIMATION -->
-<script>
+// Typing Animation
 const texts = [
   "Digital Marketing Consultant",
   "SEO & Growth Strategist",
   "Website Design Expert",
   "Business Automation Specialist",
-  "Helping Businesses Scale"
+  "Helping Businesses Scale",
+  "Swiggy, Zepto & Instamart Consultant"
 ];
 
 let textIndex = 0;
@@ -1351,10 +1704,8 @@ function typeText() {
 
 // Start typing animation
 setTimeout(typeText, 1000);
-</script>
 
-<!-- SCROLL ANIMATION -->
-<script>
+// Scroll Animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -1384,10 +1735,8 @@ function scrollToTop() {
     behavior: "smooth"
   });
 }
-</script>
 
-<!-- THEME TOGGLE -->
-<script>
+// Theme Toggle
 function toggleTheme() {
   document.body.classList.toggle("light");
   const toggleIcon = document.querySelector(".toggle i");
@@ -1442,6 +1791,49 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         top: targetElement.offsetTop - 80,
         behavior: "smooth"
       });
+    }
+  });
+});
+
+// Content Editor
+let currentEditingElement = null;
+
+function openEditor(elementId) {
+  currentEditingElement = document.getElementById(elementId);
+  const modal = document.getElementById('editModal');
+  const textarea = document.getElementById('editorTextarea');
+  
+  textarea.value = currentEditingElement.textContent;
+  modal.classList.add('active');
+}
+
+function closeEditor() {
+  const modal = document.getElementById('editModal');
+  modal.classList.remove('active');
+  currentEditingElement = null;
+}
+
+function saveContent() {
+  if (currentEditingElement) {
+    const textarea = document.getElementById('editorTextarea');
+    currentEditingElement.textContent = textarea.value;
+    
+    // In a real application, you would save this to a database
+    // For now, we'll just save to localStorage
+    localStorage.setItem(currentEditingElement.id, textarea.value);
+    
+    // Show success message
+    alert('Content saved successfully!');
+  }
+  closeEditor();
+}
+
+// Load saved content from localStorage on page load
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.editable p').forEach(element => {
+    const savedContent = localStorage.getItem(element.id);
+    if (savedContent) {
+      element.textContent = savedContent;
     }
   });
 });
